@@ -1,0 +1,27 @@
+﻿.formRowContainer {
+    width: 100%;
+    padding-top: 10px;
+}
+
+.labelContainer {
+    padding-top: 2px;
+    float: left;
+    min-width: 155px;
+}
+
+.valueContainer {
+    float: left;
+}
+
+.buttonContainer {
+    padding-top: 5px;
+    padding-left: 155px;
+}
+
+.clearStyle {
+    clear: both;
+}
+
+.field-validation-error{
+    color:red;
+}
