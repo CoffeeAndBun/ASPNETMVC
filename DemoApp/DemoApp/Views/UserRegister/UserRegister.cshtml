@@ -1,0 +1,48 @@
+﻿@model DemoApp.Models.UserRegisterModel
+
+@{
+    ViewBag.Title = "UserRegister";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>User Register Form</h2>
+
+<link href="@Url.Content("~/Content/BaseStyleSheet.css")" rel="stylesheet" type="text/css" />
+@using (Html.BeginForm())
+{
+    <div>
+        <div class="formRowContainer">
+            <div class="labelContainer">
+                @Html.LabelFor(model => model.Name)
+            </div>
+            <div class="valueContainer">
+                @Html.TextBoxFor(model => model.Name, Model.Name)
+                @Html.ValidationMessage("Name")
+            </div>
+        </div>
+        <div class="clearStyle"></div>
+        <div class="formRowContainer">
+            <div class="labelContainer">
+                @Html.LabelFor(model => model.Password)
+            </div>
+            <div class="valueContainer">
+                @Html.PasswordFor(model => model.Password, Model.Password)
+                @Html.ValidationMessage("Password")
+            </div>
+        </div>
+        <div class="clearStyle"></div>
+        <div class="formRowContainer">
+            <div class="labelContainer">
+                @Html.LabelFor(model => model.Email)
+            </div>
+            <div class="valueContainer">
+                @Html.TextBoxFor(model => model.Email, Model.Email)
+                @Html.ValidationMessage("Email")
+            </div>
+        </div>
+        <div class="clearStyle"></div>
+        <div class="buttonContainer">
+            <button>Register</button>
+        </div>
+    </div>
+} 
